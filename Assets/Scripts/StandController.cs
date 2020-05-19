@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class StandController : MonoBehaviour
 {
-    public List<string> objects;
 
-    
 }

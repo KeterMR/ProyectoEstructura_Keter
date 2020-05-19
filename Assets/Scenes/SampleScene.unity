@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 203621721}
   m_Layer: 0
   m_Name: Estante (3)
-  m_TagString: Untagged
+  m_TagString: MilkStand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,7 +203,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 10ade50513cb485449b90d0b6690182c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -223,7 +223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203621720}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.51, y: -3.256, z: -2.5273438}
+  m_LocalPosition: {x: 1.51, y: -3.256, z: 0}
   m_LocalScale: {x: 0.12959, y: 0.41555277, z: 0.12959}
   m_Children: []
   m_Father: {fileID: 0}
@@ -270,7 +270,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -370,6 +370,9 @@ GameObject:
   - component: {fileID: 710397130}
   - component: {fileID: 710397129}
   - component: {fileID: 710397128}
+  - component: {fileID: 710397131}
+  - component: {fileID: 710397132}
+  - component: {fileID: 710397133}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -431,7 +434,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -451,13 +454,62 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710397127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.76, y: -1.6, z: -1.0195312}
+  m_LocalPosition: {x: 6.76, y: -1.6, z: 0}
   m_LocalScale: {x: 3.0336, y: 3.0336, z: 3.0336}
   m_Children:
   - {fileID: 339865357}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &710397131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710397127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9f9315b3bcd7ed41b4d05d0e7619372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 710397127}
+  speed: 0.01
+  inventory: {fileID: 710397133}
+--- !u!50 &710397132
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710397127}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &710397133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710397127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e659ce873eb33a48a85aa18a3751369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects: []
 --- !u!1 &1008236540
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,7 +523,7 @@ GameObject:
   - component: {fileID: 1008236541}
   m_Layer: 0
   m_Name: Estante (2)
-  m_TagString: Untagged
+  m_TagString: ToiletPaperStand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -540,7 +592,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 10ade50513cb485449b90d0b6690182c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -560,7 +612,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008236540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.43, y: -3.141, z: -2.5273438}
+  m_LocalPosition: {x: -5.43, y: -3.141, z: 0}
   m_LocalScale: {x: 0.12959, y: 0.43904692, z: 0.12959}
   m_Children: []
   m_Father: {fileID: 0}
@@ -579,7 +631,7 @@ GameObject:
   - component: {fileID: 1683469877}
   m_Layer: 0
   m_Name: Estante (1)
-  m_TagString: Untagged
+  m_TagString: MeatStand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -648,7 +700,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 10ade50513cb485449b90d0b6690182c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -668,12 +720,81 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1683469876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.43, y: 2.787, z: -2.5273438}
+  m_LocalPosition: {x: -5.43, y: 2.787, z: 0}
   m_LocalScale: {x: 0.12959, y: 0.412616, z: 0.12959}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3589070869316546001
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3589070869554786516, guid: fdf63c0024731184cb8ed836a0e28cda,
+        type: 3}
+      propertyPath: m_Name
+      value: People
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589070869554786518, guid: fdf63c0024731184cb8ed836a0e28cda,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589070869554786518, guid: fdf63c0024731184cb8ed836a0e28cda,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2983775
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589070869554786518, guid: fdf63c0024731184cb8ed836a0e28cda,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.5526304
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589070869554786518, guid: fdf63c0024731184cb8ed836a0e28cda,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589070869554786518, guid: fdf63c0024731184cb8ed836a0e28cda,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589070869554786518, guid: fdf63c0024731184cb8ed836a0e28cda,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589070869554786518, guid: fdf63c0024731184cb8ed836a0e28cda,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589070869554786518, guid: fdf63c0024731184cb8ed836a0e28cda,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589070869554786518, guid: fdf63c0024731184cb8ed836a0e28cda,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589070869554786518, guid: fdf63c0024731184cb8ed836a0e28cda,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589070869554786518, guid: fdf63c0024731184cb8ed836a0e28cda,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fdf63c0024731184cb8ed836a0e28cda, type: 3}
 --- !u!1001 &7976122668067175085
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -694,7 +815,7 @@ PrefabInstance:
     - target: {fileID: 1055750280422569375, guid: b44a97b26664b5e47ba722f5fc94f569,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.5273438
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1055750280422569375, guid: b44a97b26664b5e47ba722f5fc94f569,
         type: 3}
@@ -740,6 +861,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Estante
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793370857784759157, guid: b44a97b26664b5e47ba722f5fc94f569,
+        type: 3}
+      propertyPath: m_TagString
+      value: Stand
+      objectReference: {fileID: 0}
+    - target: {fileID: 6219606712216050974, guid: b44a97b26664b5e47ba722f5fc94f569,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b44a97b26664b5e47ba722f5fc94f569, type: 3}
